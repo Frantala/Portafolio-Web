@@ -1,0 +1,56 @@
+@using Portfolio.Models
+
+<div class="project-card">
+
+
+<div class="project-card-content">
+
+    <h3>@Project.Name</h3>
+
+    <p>
+        @Project.Description
+    </p>
+
+    <div class="project-technologies">
+
+        @foreach (var technology in Project.Technologies)
+        {
+            <span class="technology">
+                @technology
+            </span>
+        }
+
+    </div>
+
+    <div class="project-links">
+
+        <a href="@Project.GithubUrl"
+            target="_blank"
+            class="project-link">
+            GitHub →
+        </a>
+
+        @if (!string.IsNullOrEmpty(Project.DemoUrl))
+        {
+            <a href="@Project.DemoUrl"
+                target="_blank"
+                class="project-link">
+                Demo →
+            </a>
+        }
+
+    </div>
+
+</div>
+
+
+</div>
+
+@code {
+
+
+[Parameter]
+public Project Project { get; set; } = new();
+
+
+}

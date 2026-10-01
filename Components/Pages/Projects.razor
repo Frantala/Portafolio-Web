@@ -1,0 +1,80 @@
+@page "/proyectos"
+
+<PageTitle>Proyectos | Franco</PageTitle>
+
+<section class="projects-section">
+
+
+<div class="section-header">
+
+    <p class="section-label">
+        Mis proyectos
+    </p>
+
+    <h1>
+        Cosas que estoy construyendo
+    </h1>
+
+    <p>
+        Algunos proyectos con los que estoy practicando
+        desarrollo backend y tecnologías del ecosistema .NET.
+    </p>
+
+</div>
+
+<div class="projects-grid">
+
+    @foreach (var project in ProjectList)
+    {
+        <ProjectCard Project="project" />
+    }
+
+</div>
+
+
+</section>
+
+@code {
+
+
+private List<Project> ProjectList =
+[
+    new Project
+    {
+        Name = "StoreRoom",
+
+        Description =
+            "Sistema para gestionar el préstamo y devolución de herramientas en una institución educativa.",
+
+        Technologies =
+        [
+            "C#",
+            "ASP.NET Core",
+            "ML.NET",
+            "SQL"
+        ],
+
+        GithubUrl = "https://github.com/"
+    },
+
+    new Project
+    {
+        Name = "ASP.NET Core API",
+
+        Description =
+            "API REST desarrollada para practicar HTTP, controladores, servicios y acceso a datos.",
+
+        Technologies =
+        [
+            "C#",
+            "ASP.NET Core",
+            "Entity Framework"
+        ],
+
+        GithubUrl = "https://github.com/"
+    }
+];
+
+
+}
+

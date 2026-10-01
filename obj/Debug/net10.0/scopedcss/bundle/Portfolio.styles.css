@@ -1,0 +1,269 @@
+/* /Components/Layout/MainLayout.razor.rz.scp.css */
+.page-shell[b-6s3h03cu1w] {
+    min-height: 100vh;
+    background: #020b16;
+    color: #f3f6fb;
+}
+
+.main-content[b-6s3h03cu1w] {
+    width: 100%;
+}
+
+.content[b-6s3h03cu1w] {
+    width: min(1100px, calc(100% - 48px));
+    margin: 0 auto;
+    padding: 0 0 80px;
+}
+
+@media (max-width: 640.98px) {
+    .content[b-6s3h03cu1w] {
+        width: min(calc(100% - 32px), 1100px);
+    }
+}
+
+#blazor-error-ui[b-6s3h03cu1w] {
+    color-scheme: light only;
+    background: lightyellow;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+    #blazor-error-ui .dismiss[b-6s3h03cu1w] {
+        cursor: pointer;
+        position: absolute;
+        right: 0.75rem;
+        top: 0.5rem;
+    }
+/* /Components/Layout/NavMenu.razor.rz.scp.css */
+.navbar[b-fw0lmtliz2] {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(2, 11, 22, 0.85);
+    border-bottom: 1px solid rgba(148, 163, 184, 0.18);
+    backdrop-filter: blur(10px);
+}
+
+.navbar-container[b-fw0lmtliz2] {
+    max-width: 1100px;
+    margin: 0 auto;
+    height: 70px;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-logo[b-fw0lmtliz2] {
+    color: #f8fafc;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    text-decoration: none;
+}
+
+.navbar-logo span[b-fw0lmtliz2] {
+    color: #60a5fa;
+}
+
+.navbar-links[b-fw0lmtliz2] {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navbar-link[b-fw0lmtliz2] {
+    color: #a7b4c5;
+    font-size: 0.92rem;
+    letter-spacing: 0.01em;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.navbar-link:hover[b-fw0lmtliz2] {
+    color: #f8fafc;
+}
+
+@media (max-width: 768px) {
+    .navbar-container[b-fw0lmtliz2] {
+        height: auto;
+        padding: 16px 20px;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .navbar-links[b-fw0lmtliz2] {
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navbar-link[b-fw0lmtliz2] {
+        font-size: 0.82rem;
+    }
+}
+/* /Components/Layout/ReconnectModal.razor.rz.scp.css */
+.components-reconnect-first-attempt-visible[b-g2z3n77jqs],
+.components-reconnect-repeated-attempt-visible[b-g2z3n77jqs],
+.components-reconnect-failed-visible[b-g2z3n77jqs],
+.components-pause-visible[b-g2z3n77jqs],
+.components-resume-failed-visible[b-g2z3n77jqs],
+.components-rejoining-animation[b-g2z3n77jqs] {
+    display: none;
+}
+
+#components-reconnect-modal.components-reconnect-show .components-reconnect-first-attempt-visible[b-g2z3n77jqs],
+#components-reconnect-modal.components-reconnect-show .components-rejoining-animation[b-g2z3n77jqs],
+#components-reconnect-modal.components-reconnect-paused .components-pause-visible[b-g2z3n77jqs],
+#components-reconnect-modal.components-reconnect-resume-failed .components-resume-failed-visible[b-g2z3n77jqs],
+#components-reconnect-modal.components-reconnect-retrying[b-g2z3n77jqs],
+#components-reconnect-modal.components-reconnect-retrying .components-reconnect-repeated-attempt-visible[b-g2z3n77jqs],
+#components-reconnect-modal.components-reconnect-retrying .components-rejoining-animation[b-g2z3n77jqs],
+#components-reconnect-modal.components-reconnect-failed[b-g2z3n77jqs],
+#components-reconnect-modal.components-reconnect-failed .components-reconnect-failed-visible[b-g2z3n77jqs] {
+    display: block;
+}
+
+
+#components-reconnect-modal[b-g2z3n77jqs] {
+    background-color: white;
+    width: 20rem;
+    margin: 20vh auto;
+    padding: 2rem;
+    border: 0;
+    border-radius: 0.5rem;
+    box-shadow: 0 3px 6px 2px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: display 0.5s allow-discrete, overlay 0.5s allow-discrete;
+    animation: components-reconnect-modal-fadeOutOpacity-b-g2z3n77jqs 0.5s both;
+    &[open]
+
+{
+    animation: components-reconnect-modal-slideUp-b-g2z3n77jqs 1.5s cubic-bezier(.05, .89, .25, 1.02) 0.3s, components-reconnect-modal-fadeInOpacity-b-g2z3n77jqs 0.5s ease-in-out 0.3s;
+    animation-fill-mode: both;
+}
+
+}
+
+#components-reconnect-modal[b-g2z3n77jqs]::backdrop {
+    background-color: rgba(0, 0, 0, 0.4);
+    animation: components-reconnect-modal-fadeInOpacity-b-g2z3n77jqs 0.5s ease-in-out;
+    opacity: 1;
+}
+
+@keyframes components-reconnect-modal-slideUp-b-g2z3n77jqs {
+    0% {
+        transform: translateY(30px) scale(0.95);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes components-reconnect-modal-fadeInOpacity-b-g2z3n77jqs {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes components-reconnect-modal-fadeOutOpacity-b-g2z3n77jqs {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.components-reconnect-container[b-g2z3n77jqs] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+#components-reconnect-modal p[b-g2z3n77jqs] {
+    margin: 0;
+    text-align: center;
+}
+
+#components-reconnect-modal button[b-g2z3n77jqs] {
+    border: 0;
+    background-color: #6b9ed2;
+    color: white;
+    padding: 4px 24px;
+    border-radius: 4px;
+}
+
+    #components-reconnect-modal button:hover[b-g2z3n77jqs] {
+        background-color: #3b6ea2;
+    }
+
+    #components-reconnect-modal button:active[b-g2z3n77jqs] {
+        background-color: #6b9ed2;
+    }
+
+.components-rejoining-animation[b-g2z3n77jqs] {
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+    .components-rejoining-animation div[b-g2z3n77jqs] {
+        position: absolute;
+        border: 3px solid #0087ff;
+        opacity: 1;
+        border-radius: 50%;
+        animation: components-rejoining-animation-b-g2z3n77jqs 1.5s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+    }
+
+        .components-rejoining-animation div:nth-child(2)[b-g2z3n77jqs] {
+            animation-delay: -0.5s;
+        }
+
+@keyframes components-rejoining-animation-b-g2z3n77jqs {
+    0% {
+        top: 40px;
+        left: 40px;
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+
+    4.9% {
+        top: 40px;
+        left: 40px;
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+
+    5% {
+        top: 40px;
+        left: 40px;
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+
+    100% {
+        top: 0px;
+        left: 0px;
+        width: 80px;
+        height: 80px;
+        opacity: 0;
+    }
+}
