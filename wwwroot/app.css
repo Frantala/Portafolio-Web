@@ -162,6 +162,30 @@ a {
     .projects-grid {
         grid-template-columns: 1fr;
     }
+
+        .technologies-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+        padding: 70px 20px;
+    }
+
+    .about-content h2 {
+        font-size: 2rem;
+    }
+
+    .contact-content h2 {
+        font-size: 2.4rem;
+    }
+
+    .contact-links {
+        flex-direction: column;
+    }
 }
 
 .terminal-symbol {
@@ -321,4 +345,168 @@ a {
 
 .project-link:hover {
     color: var(--accent);
+}
+
+/* =========================
+   TECHNOLOGIES
+   ========================= */
+
+.technologies-section {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    padding: 100px 24px;
+}
+
+.technologies-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.technology-card {
+    background-color: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    padding: 25px;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.technology-card:hover {
+    transform: translateY(-4px);
+
+    border-color: var(--accent);
+}
+
+.technology-icon {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 50px;
+    height: 50px;
+
+    margin-bottom: 15px;
+
+    border-radius: 10px;
+
+    background-color: rgba(88, 166, 255, 0.1);
+
+    color: var(--accent);
+
+    font-family: monospace;
+
+    font-weight: bold;
+}
+
+.technology-card h3 {
+    margin: 0 0 8px;
+
+    font-size: 1.1rem;
+}
+
+.technology-card p {
+    margin: 0;
+
+    color: var(--text-secondary);
+
+    font-size: 0.9rem;
+}
+
+/* =========================
+   ABOUT
+   ========================= */
+
+.about-section {
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+
+    background-color: var(--surface);
+}
+
+.about-content {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 100px 24px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+}
+
+.about-content h2 {
+    font-size: 2.3rem;
+
+    line-height: 1.2;
+
+    margin: 0;
+}
+
+.about-text {
+    color: var(--text-secondary);
+
+    line-height: 1.8;
+
+    font-size: 1.05rem;
+}
+
+.about-text p {
+    margin-top: 0;
+
+    margin-bottom: 20px;
+}
+
+/* =========================
+   CONTACT
+   ========================= */
+
+.contact-section {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 120px 24px;
+
+    text-align: center;
+}
+
+.contact-content {
+    max-width: 650px;
+
+    margin: 0 auto;
+}
+
+.contact-content h2 {
+    font-size: 3rem;
+
+    margin: 10px 0 20px;
+}
+
+.contact-content > p:not(.section-label) {
+    color: var(--text-secondary);
+
+    line-height: 1.7;
+
+    margin-bottom: 35px;
+}
+
+.contact-links {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
 }

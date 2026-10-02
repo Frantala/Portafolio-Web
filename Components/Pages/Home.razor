@@ -1,17 +1,18 @@
 ﻿@page "/"
 
-<PageTitle>Franco | Backend Developer</PageTitle>
+<PageTitle>Franco | Backend Developer .NET</PageTitle>
 
-<section class="hero">
+<!-- =========================  HERO  ========================= -->
+
+<section id="inicio" class="hero">
 
 
 <div class="hero-content">
 
     <p class="hero-greeting">
-    <span class="terminal-symbol">></span>
-    Hola, soy Franco 👋
-</p>
-
+        <span class="terminal-symbol">></span>
+        Hola, soy Franco Talarico 👋
+    </p>
 
     <h1>
         Backend Developer
@@ -24,16 +25,249 @@
     </p>
 
     <div class="hero-buttons">
+
         <a href="#proyectos" class="btn btn-primary">
             Ver proyectos
         </a>
 
-        <a href="https://github.com/Frantala" class="btn btn-secondary">
+        <a href="https://github.com/"
+           target="_blank"
+           class="btn btn-secondary">
             GitHub
         </a>
+
+    </div>
+
+</div>
+```
+
+</section>
+
+<!-- =========================  TECNOLOGÍAS  ========================= -->
+
+<section id="tecnologias" class="technologies-section">
+
+
+<div class="section-header">
+
+    <p class="section-label">
+        Tecnologías
+    </p>
+
+    <h2>
+        Herramientas con las que trabajo
+    </h2>
+
+    <p>
+        Tecnologías que estoy utilizando para desarrollar
+        proyectos y continuar aprendiendo.
+    </p>
+
+</div>
+
+<div class="technologies-grid">
+
+    <div class="technology-card">
+        <span class="technology-icon">C#</span>
+        <h3>C#</h3>
+        <p>Lenguaje principal</p>
+    </div>
+
+    <div class="technology-card">
+        <span class="technology-icon">.NET</span>
+        <h3>ASP.NET Core</h3>
+        <p>Desarrollo backend</p>
+    </div>
+
+    <div class="technology-card">
+        <span class="technology-icon">SQL</span>
+        <h3>SQL</h3>
+        <p>Bases de datos</p>
+    </div>
+
+    <div class="technology-card">
+        <span class="technology-icon">MG</span>
+        <h3>MongoDB</h3>
+        <p>NoSQL</p>
+    </div>
+
+    <div class="technology-card">
+        <span class="technology-icon">JS</span>
+        <h3>React.js</h3>
+        <p>Frontend</p>
+    </div>
+
+    <div class="technology-card">
+        <span class="technology-icon">ML</span>
+        <h3>ML.NET</h3>
+        <p>Machine Learning</p>
     </div>
 
 </div>
 
 
 </section>
+
+<!-- ========================= PROYECTOS  ========================= -->
+
+<section id="proyectos" class="projects-section">
+
+
+<div class="section-header">
+
+    <p class="section-label">
+        Portfolio
+    </p>
+
+    <h2>
+        Algunos de mis proyectos
+    </h2>
+
+    <p>
+        Proyectos que construí para practicar y aplicar
+        diferentes tecnologías.
+    </p>
+
+</div>
+
+<div class="projects-grid">
+
+    @foreach (var project in Projects)
+    {
+        <ProjectCard Project="project" />
+    }
+
+</div>
+
+
+</section>
+
+<!-- =========================  SOBRE MÍ ========================= -->
+
+<section id="sobre-mi" class="about-section">
+
+
+<div class="about-content">
+
+    <div>
+
+        <p class="section-label">
+            Sobre mí
+        </p>
+
+        <h2>
+            Construyendo mi camino en desarrollo de software.
+        </h2>
+
+    </div>
+
+    <div class="about-text">
+
+        <p>
+            Actualmente estoy formándome en desarrollo de software,
+            con especial interés en backend y el ecosistema .NET.
+        </p>
+
+        <p>
+            Me interesa construir aplicaciones reales, aprender
+            buenas prácticas de arquitectura y seguir profundizando
+            en C#, ASP.NET Core, bases de datos y cloud.
+        </p>
+
+        <p>
+            Este portfolio es también parte de ese proceso:
+            cada proyecto representa algo que estoy aprendiendo
+            y poniendo en práctica.
+        </p>
+
+    </div>
+
+</div>
+
+
+</section>
+
+<!-- ========================= CONTACTO  ========================= -->
+
+<section id="contacto" class="contact-section">
+
+
+<div class="contact-content">
+
+    <p class="section-label">
+        Contacto
+    </p>
+
+    <h2>
+        ¿Hablamos?
+    </h2>
+
+    <p>
+        Si querés conocer más sobre mis proyectos o ponerte
+        en contacto conmigo, podés encontrarme en:
+    </p>
+
+    <div class="contact-links">
+
+        <a href="https://github.com/"
+           target="_blank"
+           class="btn btn-primary">
+            GitHub
+        </a>
+
+        <a href="https://www.linkedin.com/in/franco-talarico/?isSelfProfile=true"
+           target="_blank"
+           class="btn btn-secondary">
+            LinkedIn
+        </a>
+
+    </div>
+
+</div>
+
+
+</section>
+
+@code {
+
+
+private List<Project> Projects =
+[
+    new Project
+    {
+        Name = "StoreRoom",
+
+        Description =
+            "Sistema para gestionar el préstamo y devolución de herramientas en una institución educativa.",
+
+        Technologies =
+        [
+            "C#",
+            "ASP.NET Core",
+            "ML.NET",
+            "SQL"
+        ],
+
+        GithubUrl = "https://github.com/"
+    },
+
+    new Project
+    {
+        Name = "ASP.NET Core API",
+
+        Description =
+            "API REST desarrollada para practicar HTTP, controladores, servicios y acceso a datos.",
+
+        Technologies =
+        [
+            "C#",
+            "ASP.NET Core",
+            "Entity Framework"
+        ],
+
+        GithubUrl = "https://github.com/"
+    }
+];
+
+
+}
